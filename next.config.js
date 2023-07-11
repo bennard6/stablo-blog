@@ -16,20 +16,21 @@ const nextConfig = {
   },
   eslint: {
     /// Set this to false if you want production builds to abort if there's lint errors
-    ignoreDuringBuild,s: process.env.VERCEL_ENV === "production"
-  },
-  async rewrites() {
-    return [
-      {
-        source: '/',
-        destination: '/index.html',
-      },
-      {
-        source: '/portfolio',
-        destination: '/portfolio.html',
-      },
-    ]
-  },
+    ignoreDuringBuild,
+    s: process.env.VERCEL_ENV === "production"
+  }
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: '/',
+  //       destination: '/index.html',
+  //     },
+  //     {
+  //       source: '/portfolio',
+  //       destination: '/about-us.html',
+  //     },
+  //   ]
+  // },
 };
 
 module.exports = nextConfig;
